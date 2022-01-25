@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="imgs-container">
+            <div class="img-container">
+                <div class="text">
+                    <h1>Joanna Kosinska</h1>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore, doloremque!</p>
+                </div>
+                <img src="https://images.unsplash.com/photo-1472289065668-ce650ac443d2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80" alt="">
+            </div>
+            <div class="img-container">
+                <div class="text">
+                    <h1>Joanna Kosinska</h1>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore, doloremque!</p>
+                </div>
+                <img src="https://images.unsplash.com/photo-1510070009289-b5bc34383727?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80" alt="">
+            </div>
+            <div class="img-container">
+                <div class="text">
+                    <h1>Volodymyr</h1>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore, doloremque!</p>
+                </div>
+                <img src="https://images.unsplash.com/photo-1585435465945-bef5a93f8849?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="">
+            </div>
+            <div class="img-container">
+                <div class="text">
+                    <h1>Volodymyr</h1>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore, doloremque!</p>
+                </div>
+                <img src="https://images.unsplash.com/photo-1585435516476-bd92c7d4d9b2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="">
+            </div>
+            <div class="img-container">
+                <div class="text">
+                    <h1>Volodymyr</h1>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore, doloremque!</p>
+                </div>
+                <img src="https://images.unsplash.com/photo-1585435669168-f4cc3f5d1b8e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1008&q=80" alt="">
+            </div>
+        </div>
+        <div class="buttons-container">
+            <div class="button-container">
+                <button id="next"></button>
+            </div>
+            <div class="button-container">
+                <button id="prev"></button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        
+        const img_container = document.getElementsByClassName("img-container");
+        const next = document.getElementById("next");
+        const prev = document.getElementById("prev");
+        img_container[0].style.left=0
+
+        var up = 1;
+        var down = 0;
+
+
+        next.addEventListener("click", function () {
+            if (up<=5) {
+                img_container[up].style.left=0
+                up++
+                down++
+            }
+        })
+        prev.addEventListener("click", function () {
+            if (down>=1) {
+                img_container[down].style.left="-100%"
+                down=down-1
+                up--
+            }
+        })
+
+    </script>
+</body>
+</html>
